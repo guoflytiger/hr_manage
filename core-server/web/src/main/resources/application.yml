@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    url: jdbc:mysql://112.124.12.109:3306/hr_management?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 112.124.12.109
+    publisher-confirms: true
+    publisher-returns: true
+  redis:
+    host: 112.124.12.109
+    database: 0
+    port: 6379
+    password: redis
+  cache:
+    cache-names: menus_cache
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  port: 9527
+  compression:
+    enabled: true
+fastdfs:
+  nginx:
+    host: http://112.124.12.109/
+mybatis-plus:
+  type-aliases-package: com.zict.entity
+  mapper-locations: classpath:mybatis/mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
